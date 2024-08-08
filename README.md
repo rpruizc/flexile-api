@@ -92,6 +92,6 @@ Then, to run the API server and the frontend project locally:
     `http-server . -c-1`
     
 
-##Other requirements
+## Other requirements
 
 Please visit [rpruizc/flexile-time-tracker (github.com)](https://github.com/rpruizc/flexile-time-tracker) to get the API server and frontend emulation code.
