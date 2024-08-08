@@ -89,7 +89,7 @@ Then, to run the API server and the frontend project locally:
 
 4. On a new terminal session, serve the frontend
 
-`http-server . -c-1`
+    `http-server . -c-1`
     
 
 ##Other requirements
