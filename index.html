@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flexile Time Tracking</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-gray-100 min-h-screen flex">
+  <!-- Sidebar -->
+  <aside class="sidebar bg-gray-900 text-gray-300 flex flex-col p-4">
+    <div class="flex items-center mb-8">
+      <img src="logo.png" alt="Flexile Logo" class="h-8 mr-3">
+      <span class="text-xl font-bold text-white">Flexile</span>
+    </div>
+    <nav class="flex-1">
+      <ul>
+        <li class="mb-2">
+          <a href="#" class="flex items-center p-2 rounded hover:bg-gray-700">
+            <i class="fas fa-file-invoice sidebar-icon"></i>
+            <span class="ml-2">Invoices</span>
+          </a>
+        </li>
+        <li class="mb-2">
+          <a href="#" class="flex items-center p-2 rounded hover:bg-gray-700 active">
+            <i class="fas fa-clock sidebar-icon"></i>
+            <span class="ml-2">Tracking</span>
+          </a>
+        </li>
+        <li class="mb-2">
+          <a href="#" class="flex items-center p-2 rounded hover:bg-gray-700">
+            <i class="fas fa-file-alt sidebar-icon"></i>
+            <span class="ml-2">Documents</span>
+          </a>
+        </li>
+        <li>
+          <a href="#" class="flex items-center p-2 rounded hover:bg-gray-700">
+            <i class="fas fa-cogs sidebar-icon"></i>
+            <span class="ml-2">Settings</span>
+          </a>
+        </li>
+      </ul>
+    </nav>
+    <div class="mt-4">
+      <a href="#" class="flex items-center p-2 rounded hover:bg-gray-700">
+        <i class="fas fa-user sidebar-icon"></i>
+        <span class="ml-2">Profile</span>
+      </a>
+      <a href="#" class="flex items-center p-2 mt-2 rounded hover:bg-gray-700">
+        <i class="fas fa-sign-out-alt sidebar-icon"></i>
+        <span class="ml-2">Log out</span>
+      </a>
+    </div>
+  </aside>
+
+  <!-- Main Content -->
+  <div class="flex-1 p-6">
+    <header class="mb-6 flex justify-between items-center">
+      <h1 class="text-3xl font-bold">August</h1>
+      <button id="finalize-invoice" class="bg-black text-white py-2 px-4 rounded-full">Finalize invoice</button>
+    </header>
+    <div class="figures flex mb-6">
+      <figure class="mr-6">
+        <div class="text-2xl font-bold">4h 0m</div>
+        <figcaption class="text-gray-500">So far this month</figcaption>
+      </figure>
+      <figure>
+        <div class="text-2xl font-bold">$40</div>
+        <figcaption class="text-gray-500">Amount to bill</figcaption>
+      </figure>
+    </div>
+    <table class="w-full bg-white rounded-lg shadow-md">
+      <thead class="bg-gray-200">
+        <tr>
+          <th class="p-2 text-center">Task</th>
+          <th class="p-2 text-center">Mon<br>5</th>
+          <th class="p-2 text-center">Tue<br>6</th>
+          <th class="p-2 text-center">Wed<br>7</th>
+          <th class="p-2 text-center">Thu<br>8</th>
+          <th class="p-2 text-center">Fri<br>9</th>
+          <th class="p-2 text-center">Sat<br>10</th>
+          <th class="p-2 text-center">Sun<br>11</th>
+          <th class="p-2 text-center">Actions</th>
+        </tr>
+      </thead>
+      <tbody id="tasks-body" class="text-center">
+        <!-- Tasks will be dynamically added here -->
+      </tbody>
+      <tfoot class="bg-gray-100">
+        <tr>
+          <td class="p-2 text-center">Total</td>
+          <td class="p-2 text-center" id="total-mon">--</td>
+          <td class="p-2 text-center" id="total-tue">--</td>
+          <td class="p-2 text-center" id="total-wed">--</td>
+          <td class="p-2 text-center" id="total-thu">--</td>
+          <td class="p-2 text-center" id="total-fri">--</td>
+          <td class="p-2 text-center" id="total-sat">--</td>
+          <td class="p-2 text-center" id="total-sun">--</td>
+          <td class="p-2 text-center"></td>
+        </tr>
+      </tfoot>
+    </table>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
